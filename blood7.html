@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validation()
+{
+alert("form submitted");
+location.replace("http://www.google.com");
+var n=document.myform.name.value;
+if(n.match(/^[A-Za-z][A-Za-z]*$/))
+c=1;
+else
+{
+alert("Name field doesnot allow digits and Special symbols");
+c=0;
+}
+var p=document.myform.phonenumber.value;
+if(p.match(/^\d{10}$/))
+c=1;
+else
+{
+alert("Invalid Mobile Number");
+c=0;
+}
+var a=document.myform.Age.value;
+if(a<=0 || a>=120)
+{
+alert("Age value is not appropriate");
+c=0;
+}
+else
+c=1;
+if (c==1)
+return true;
+else
+return false;
+}
+</script>
+<style>
+body {
+  background-image: url('https://media.istockphoto.com/photos/doctor-hands-with-medical-gloves-holding-child-hands-and-red-heart-picture-id1224288701?k=20&m=1224288701&s=612x612&w=0&h=5WgmWywnkKGepSl5g2CS7AWnapoOXnyV6Y8eiFB3_II=');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+
+}
+</style>
+</head>
+<body>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<form action="sub2.php" name="myform" method="post" onsubmit="return validation()">
+<form>
+<div class="bg-text">
+  <h1 align=center style="font-size:50px">LIFE IN A BLOOD DROP</h1>
+  <p align=center style="font-family:'courier new'">BRING A LIFE BACK TO POWER</p>
+</div>
+
+<label>NAME</label><br>
+<input type="text" name="name" sixe=20><br>
+
+<label>Age</label><br>
+<input type="text"  name="age" sixe=10><br>
+
+<label for="fname">PHONE NUMBER</label><br>
+<input type="text"  name="phonenumber" sixe=2><br>
+
+
+<label>GENDER</label><br>
+<p>Please select your Gender:</p>
+<input type="radio" id="Male" name="gender" value="Male">
+<label for="Male">Male</label><br>
+<input type="radio" id="Female" name="gender" value=Female">
+<label for="Female">Female</label><br>
+<input type="radio" id="Others" name="gender" value=Others">
+<label for="Others">Others</label><br>
+<label for="Date Of Birth">Date Of Birth:</label><br>
+<input type="date" id="dateofbirth" name="dateofbirth"><br>
+
+<label>BLOOD GROUP</label><br>
+<label>
+<input type="radio" name="bloodgroup" value="O+" required>O+
+</label><br>
+<label>
+<input type="radio" name="bloodgroup" value="O-" required>O-
+</label><br>
+<label>
+<input type="radio" name="bloodgroup" value="A+" required>A+
+</label><br>
+<label>
+<input type="radio" name="bloodgroup" value="A-" required>A-
+</label><br>
+<label>
+<input type="radio" name="bloodgroup" value="B+" required>B+
+</label><br>
+<label>
+<input type="radio" name="bloodgroup" value="B-" required>B-
+</label><br>
+<label>
+<input type="radio" name="bloodgroup" value="AB+" required>AB+
+</label><br>
+<label>
+<input type="radio" name="bloodgroup" value="AB-" required>AB-
+</label><br>
+
+<label>PLACE</label><br>
+<input type="text" required/ name="place"><br>
+
+<label>TIME DURATION</label><br>
+<input type="text" required/ name="timeduration"><br>
+
+<input type="submit" value="Submit" onclick="return mess()">
+</form>
+<script type="text/javascript">
+function mess()
+{
+alert("record is submitted successfully");
+return true;
+}
+</script>
+</body>
+</html>
